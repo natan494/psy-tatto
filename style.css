@@ -1,0 +1,637 @@
+@import url("https://use.typekit.net/exq8izx.css");
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+a {
+	text-decoration: none;
+}
+
+.nav-bar__logo {
+	text-decoration: none;
+	color: black;
+	font-size: 6rem;
+	font-family: p22-spooky, sans-serif;
+}
+#myVideo {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: -1;
+	opacity: 0.5;
+}
+.fa-square-full {
+	opacity: 0.5;
+}
+
+.header {
+	background: linear-gradient(200deg, rgb(6, 6, 6) 0%, rgba(6, 6, 6, 0.4) 100%);
+
+	height: 100vw;
+	position: relative;
+}
+
+.nav-bar {
+	display: flex;
+	justify-content: space-around;
+	padding-top: 2rem;
+
+	padding-bottom: 2rem;
+	position: fixed;
+	width: 100vw;
+	transition: all 1s;
+	top: 0%;
+}
+
+.nav-bar__link {
+	text-decoration: none;
+	color: black;
+	font-size: 4rem;
+	margin: 2rem;
+	font-family: monospace;
+	font-weight: bold;
+}
+
+.header__wellcome__container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 50%;
+	padding-bottom: 17rem;
+}
+.header__wellcome {
+	font-size: 25rem;
+	font-family: p22-spooky, sans-serif;
+
+	font-weight: 400;
+	letter-spacing: 1rem;
+	font-style: normal;
+	color: rgb(0, 255, 0);
+	animation-name: headerAni;
+	animation-duration: 4s;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes headerAni {
+	0% {
+		opacity: 0;
+		transform: translate(-300px);
+	}
+	50% {
+		opacity: 0.5;
+		transform: translate(40px);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0px);
+	}
+}
+
+.header__btn {
+	margin-top: 4rem;
+	cursor: pointer;
+	padding: 1rem 5rem;
+	font-size: 4rem;
+	border-radius: 40px;
+	background-color: rgb(103, 102, 102);
+	color: white;
+	transition: all 0.5s;
+	border: none;
+	font-weight: 100;
+	font-family: nitti, monospace;
+}
+.header__btn:hover {
+	background-color: white;
+	color: black;
+}
+
+.about__container {
+	background-color: black;
+	height: max-content;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	padding: 10rem;
+}
+.about_paula__container {
+	line-height: 5rem;
+	order: 2;
+}
+.bgwhite {
+	background-color: rgba(255, 255, 255, 0.527);
+	height: min-content;
+	z-index: 1;
+	align-items: center;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.about__paula {
+	color: white;
+	font-size: 5rem;
+	text-align: left;
+	margin-bottom: 3rem;
+}
+.about__descrption {
+	color: white;
+	font-size: 3.5rem;
+	text-align: right;
+	margin-right: 6rem;
+}
+.about_img {
+	width: 100%;
+}
+
+.about__img__container {
+	width: 100%;
+	order: 1;
+}
+.sig_container_desk {
+	order: 3;
+}
+
+.gellery__container {
+	background-color: black;
+
+	border: none;
+}
+.gellery__title {
+	text-align: center;
+	font-size: 5rem;
+	color: white;
+	margin-bottom: 4rem;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.253);
+	padding-bottom: 1rem;
+}
+.gellery_image_container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.gellery_image_container img {
+	width: 19vw;
+	height: 30vh;
+	margin: 1rem;
+	transition: all 0.5s;
+}
+
+.gellery_image_container img:hover {
+	cursor: pointer;
+
+	border: 1px solid white;
+	padding: 1rem;
+}
+
+/* Style the Image Used to Trigger the Modal */
+#myImg {
+	border-radius: 5px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+#myImg:hover {
+	opacity: 0.7;
+}
+
+.modal {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.733);
+	margin-top: -1px;
+	z-index: 2;
+	animation: zoom 0.3s ease-in-out;
+}
+
+@keyframes zoom {
+	from {
+		transform: scale(0);
+	}
+	to {
+		transform: scale(1);
+	}
+}
+.modal img {
+	width: 50%;
+	object-fit: cover;
+	height: 80%;
+}
+
+.closeBtn {
+	color: rgba(255, 255, 255, 0.87);
+	font-size: 25px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 20px;
+	cursor: pointer;
+	transition: 0.2s ease-in-out;
+}
+
+.closeBtn:hover {
+	color: rgb(255, 255, 255);
+}
+.qanda {
+	background-color: black;
+	color: white;
+	text-align: center;
+	padding: 5rem 6rem 5rem 6rem;
+	font-size: 2rem;
+	line-height: 3.5rem;
+}
+
+.qanda div {
+	margin: 5rem;
+}
+.qanda div h3 {
+	margin-bottom: 2rem;
+	margin-top: 1rem;
+	font-size: 4rem;
+}
+.fa-whatsapp {
+	font-size: 6rem;
+	transition: all 2s;
+	cursor: pointer;
+	animation-name: whatup;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+.watahUp {
+	position: fixed;
+	bottom: 0%;
+	color: rgb(67, 197, 67);
+	right: 0;
+	margin: 2rem;
+	border-radius: 50%;
+	border: 1px solid white;
+	padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+	background-color: white;
+	opacity: 0.8;
+	cursor: pointer;
+}
+.watahUp:hover {
+	opacity: 1;
+}
+
+footer {
+	background-color: rgb(74, 74, 74);
+	height: min-content;
+}
+footer img {
+	width: 50px;
+}
+.icon__container {
+	display: flex;
+	justify-content: center;
+	padding-top: 2rem;
+	align-items: center;
+}
+.icon__container div {
+	margin: 2.5rem;
+	width: 50px;
+}
+.icon__insta {
+	width: 75px;
+}
+.fotter__links {
+	display: flex;
+	flex-direction: column;
+}
+.fotter__link__container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.fotter__link__container a {
+	text-decoration: none;
+	color: rgb(138, 136, 136);
+	font-size: 2.8rem;
+	margin: 1rem;
+}
+.fotter__link__container h3 {
+	font-size: 4rem;
+	color: rgb(228, 228, 228);
+	padding: 2rem 0rem 2rem 0rem;
+}
+.credit {
+	font-size: 2rem;
+	padding: 2rem;
+	text-align: left;
+}
+
+@keyframes whatup {
+	50% {
+		transform: scale(1.1);
+	}
+	60% {
+		transform: scale(1.2);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@media (max-width: 800px) {
+	.sig_container_desk {
+		display: none;
+	}
+	html {
+		font-size: 50%;
+	}
+	.header {
+		height: 100vw;
+	}
+	.header__wellcome {
+		text-align: center;
+		font-size: 8rem;
+	}
+	.header__wellcome__container {
+		padding-bottom: 40rem;
+		margin-top: 11rem;
+		height: 100vh;
+	}
+	.fa-x {
+		margin: 2rem;
+	}
+	.about__paula {
+		text-align: center;
+	}
+
+	.nav-bar {
+		justify-content: space-between;
+		padding: 0rem 2rem 0rem 2rem;
+	}
+	.nav-bar__links__container {
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		top: 0;
+		background-color: white;
+		height: 500%;
+		right: -100%;
+		transition: right 2s;
+	}
+	.fa-bars {
+		font-size: 5rem;
+	}
+	.header {
+		overflow-x: hidden;
+		height: 140%;
+		align-items: center;
+	}
+
+	.navlinksshow {
+		right: 0;
+		width: 40vw;
+	}
+	.about__container {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		display: flex;
+		padding: 0;
+		padding-top: 10rem;
+	}
+	.about_paula__container {
+		margin-bottom: 5rem;
+		margin-top: 5rem;
+		order: 2;
+	}
+	.about_img {
+		margin: 0;
+		width: 100%;
+	}
+	.about__img__container {
+		width: 100%;
+		order: 1;
+	}
+	.tatto {
+		color: white;
+	}
+	.sig_container {
+		order: 3;
+		font-size: 10rem;
+	}
+	#x {
+		font-size: 4rem;
+	}
+	body {
+		transition: background-color 0.5s;
+	}
+	.gellery_image_container img {
+		width: 33.33vw;
+		height: 20vh;
+	}
+	.modal img {
+		width: 90%;
+		height: 70%;
+	}
+	.qanda {
+		background-color: black;
+		color: white;
+		text-align: center;
+		padding: 5rem 0rem 5rem 0rem;
+		font-size: 2rem;
+		line-height: 3.5rem;
+	}
+}
+
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
+	.ipad-portrait {
+		color: red;
+	} /* your css rules for ipad portrait */
+	.gellery_image_container img {
+		width: 30vw;
+		height: 20vh;
+	}
+}
+
+@media all and (device-width: 820px) {
+	html {
+		font-size: 50%;
+	}
+	.header {
+		height: 100vh;
+		overflow-x: hidden;
+	}
+	.gellery_image_container img {
+		width: 30vw;
+		height: 20vh;
+	}
+	.about__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		padding-top: 20rem;
+		position: relative;
+	}
+	.sig_container_desk {
+		top: 1% !important;
+	}
+	.header__wellcome {
+		font-size: 15rem;
+	}
+
+	.about__paula {
+		text-align: center;
+	}
+	.about_img {
+		width: 100%;
+		margin: 0;
+		margin-top: 2rem;
+	}
+	.sig_container_desk {
+		position: absolute;
+		top: 10%;
+		left: 50%;
+		transform: translate(-50%);
+	}
+}
+@media (device-width: 912px) {
+	.gellery_image_container img {
+		width: 40vw;
+		height: 30vh;
+	}
+	.header {
+		height: 100vh;
+		overflow-x: hidden;
+	}
+	.header__wellcome {
+		font-size: 15rem;
+	}
+	.about__paula {
+		text-align: center;
+	}
+	.about__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		padding-top: 20rem;
+		position: relative;
+	}
+	.about_img {
+		width: 100%;
+		margin: 0;
+		margin-top: 2rem;
+	}
+	.sig_container_desk {
+		position: absolute;
+		top: 5%;
+		left: 50%;
+		transform: translate(-50%);
+	}
+}
+
+@media (min-width: 801px) {
+	.sig_container {
+		display: none;
+	}
+	.sig_container_desk {
+		align-self: flex-start;
+		display: block;
+	}
+	#hemburger {
+		display: none;
+	}
+	#x {
+		display: none;
+	}
+}
+
+@media (device-width: 1024px) {
+	.gellery_image_container img {
+		width: 30vw;
+		height: 40vh;
+	}
+
+	.header {
+		height: 100vw;
+		overflow-x: hidden;
+	}
+	.header__wellcome {
+		font-size: 16rem;
+	}
+	.about__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		padding-top: 20rem;
+		position: relative;
+	}
+	.about_img {
+		width: 100%;
+		margin: 0;
+		margin-top: 2rem;
+	}
+	.sig_container_desk {
+		position: absolute;
+		top: 10%;
+		left: 50%;
+		transform: translate(-50%);
+	}
+	.bgwhite {
+		background-color: rgba(255, 255, 255, 0.628);
+		height: 14vh;
+		z-index: 1;
+		justify-content: space-around;
+	}
+	.about__paula {
+		text-align: center;
+	}
+	.sig_container_desk {
+		top: 1%;
+	}
+}
+
+@media all and (device-width: 280px) {
+	html {
+		font-size: 30%;
+	}
+}
+
+@media all and (device-width: 1280px) {
+	.about__container {
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+	}
+	.about_img {
+		margin: 0;
+	}
+	.header {
+		overflow-x: hidden;
+	}
+	.sig_container_desk {
+		align-self: center;
+	}
+	.about__paula {
+		text-align: center;
+	}
+}
