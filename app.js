@@ -31,6 +31,7 @@ onscroll = (event) => {
 		navLogo.style.paddingBottom = `2rem`;
 		for (link of linkNav) {
 			link.style.fontSize = `2.5rem`;
+			link.classList.remove(`op`);
 		}
 	} else {
 		navBar.style.opacity = `0`;
